@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
@@ -19,24 +18,38 @@ public class GUIStudent extends Application {
 
     // 1. Create main layout
     BorderPane mainLayout = new BorderPane();
+
     // 1.1 Create buttons for menu
     HBox menu = new HBox();
     menu.setPadding(new Insets(20, 20, 20, 20));
     menu.setSpacing(10);
+
     // 1.2 Create buttons for menu
     Label studentLabel = new Label("Student");
-    Button createStudent = new Button("Add");
-    Button readStudent = new Button("Read");
-    Button updateStudent = new Button("Update");
-    Button deleteStudent = new Button("Delete");
+    Button createStudentButton = new Button("Add");
+    Button readStudentButton = new Button("Read");
+    Button updateStudentButton = new Button("Update");
+    Button deleteStudentButton = new Button("Delete");
+
     // 1.3 Add buttons to menu
-    menu.getChildren().addAll(studentLabel, createStudent, readStudent, updateStudent, deleteStudent);
+    menu.getChildren().addAll(studentLabel, createStudentButton, readStudentButton, updateStudentButton, deleteStudentButton);
     mainLayout.setTop(menu);
 
     // 2. Create CREATE STUDENT subview layout
-    // Create vertial box to add all horizontal boxes
-    VBox createStudentForm = new VBox();
-    createStudentForm.setSpacing(30);
+    VBox createStudentView = new VBox(new Label("Enter new student's details below"));
+    createStudentView.setSpacing(30);
+
+    // 3. Create READ STUDENT subview layout
+    VBox readStudentView = new VBox(new Label("Enter student's email which you would like to read more about"));
+    readStudentView.setSpacing(30);
+
+    // 4. Create UPDATE STUDENT subview layout
+    VBox updateStudentView = new VBox(new Label("Enter student's email which you would like to update"));
+    updateStudentView.setSpacing(30);
+
+    // 5. Create READ STUDENT subview layout
+    VBox deleteStudentView = new VBox(new Label("Enter student's email which you would like to delete"));
+    deleteStudentView.setSpacing(30);
 
     // Add horizontal FIRSTNAME box
     TextField inputFirstName = new TextField("");
@@ -88,12 +101,25 @@ public class GUIStudent extends Application {
     HBox country = new HBox(new Label("Enter your country:"));
     country.getChildren().add(inputCountry);
 
+    // 4 add label to UPDATE STUDENT 
+    Label updateText = new Label("Fill in the textfields which you would like to update")
+
     // 2.1 add to parent node ADD TO CREATE STUDENT FORM
-    createStudentForm.getChildren().addAll(firstName, lastName, email, dateOfBirth, gender, postalCode, street,
+    createStudentView.getChildren().addAll(firstName, lastName, email, dateOfBirth, gender, postalCode, street,
         houseNumber, city, country);
 
-    // LAST set scene to create student AS STANDARD
-    mainLayout.setCenter(createStudentForm);
+    // 3.1 add to parent node ADD TO READ STUDENT FORM
+    readStudentView.getChildren().addAll(email);
+
+    // 4.1 add to parent node ADD TO UPDATE STUDENT FORM
+    updateStudentView.getChildren().addAll(email, updateText, firstName, lastName, email, dateOfBirth, gender,
+        postalCode, street, houseNumber, city, country);
+
+    // 5.1 add to parent node ADD TO DELETE STUDENT FORM
+    deleteStudentView.getChildren().addAll(email);
+
+    // 6. set scene to create student AS STANDARD
+    mainLayout.setCenter(createStudentView);
     Scene view = new Scene(mainLayout);
 
     // Start application, set title, set scene and show window
