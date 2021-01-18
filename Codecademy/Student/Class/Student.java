@@ -1,6 +1,6 @@
-package Student;
+package Student.Class;
 
-public class StudentClass {
+public class Student {
   String email;
   String firstName;
   String lastName;
@@ -12,7 +12,7 @@ public class StudentClass {
   String city;
   String country;
 
-  public StudentClass(String email, String firstName, String lastName, String dateOfBirth, String gender, String street,
+  public Student(String email, String firstName, String lastName, String dateOfBirth, String gender, String street,
       String houseNumber, String postalCode, String city, String country) {
     this.email = email;
     this.firstName = firstName;
