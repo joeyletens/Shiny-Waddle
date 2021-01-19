@@ -3,7 +3,7 @@ package Registration.Database;
 import java.sql.*;
 
 public class RegistrationDatabase {
-  public static void main(String[] args) {
+  public static void addRegistrationToDatabase(String email, int courseId, String date) {
 
     // Dit zijn de instellingen voor de verbinding. Vervang de databaseName indien
     // deze voor jou anders is.
@@ -26,7 +26,8 @@ public class RegistrationDatabase {
       con = DriverManager.getConnection(connectionUrl);
 
       // Stel een SQL query samen.
-      String SQL = "SELECT TOP 10 * FROM Boek";
+      String SQL = "INSERT INTO Registration VALUES('" + email + "','" + courseId + "','" + date
+          + "') SELECT TOP 10 * FROM Boek";
       stmt = con.createStatement();
       // Voer de query uit op de database.
       rs = stmt.executeQuery(SQL);
