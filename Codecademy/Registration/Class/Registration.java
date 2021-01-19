@@ -4,13 +4,13 @@ import Course.Class.Course;
 import Student.Class.Student;
 
 public class Registration {
-  String name;
-  String course;
+  String email;
+  int courseId;
   String date;
 
-  public Registration(String name, String course, String date) {
-    this.name = name;
-    this.course = course;
+  public Registration(String email, int courseId, String date) {
+    this.email = email;
+    this.courseId = courseId;
     this.date = date;
   }
 }
