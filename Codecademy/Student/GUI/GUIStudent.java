@@ -1,5 +1,6 @@
 package Student.GUI;
 
+import Student.Database.CRUDStudent;
 import javafx.application.*;
 import javafx.scene.*;
 import javafx.scene.control.*;
@@ -148,9 +149,12 @@ public class GUIStudent extends Application {
     window.show();
   }
 
-  public static void main(String[] args) {
-    // Launches the graphical user interface
-    launch(GUIStudent.class);
-  }
+  // public static void main(String[] args) {
+  // // Launches the graphical user interface
+  // CRUDStudent.database("jletfefeefefefef@gmail.com", "Joey", "Letens",
+  // "15/04/2002", "male", "Draaiboom", "105",
+  // "4433wp");
+  // launch(GUIStudent.class);
+  // }
 
 }
