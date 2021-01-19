@@ -6,6 +6,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RegistrationGUI",
+      "request": "launch",
+      "vmArgs": "-p C:\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls",
+      "mainClass": "Registration.GUI.RegistrationGUI",
+      "projectName": "Codecademy_5c598365"
+    },
+    {
+      "type": "java",
       "name": "Launch GUIStudent",
       "request": "launch",
       "vmArgs": "-p C:\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls",
