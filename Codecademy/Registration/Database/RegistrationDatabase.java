@@ -38,9 +38,9 @@ public class RegistrationDatabase {
       // ze.
       while (rs.next()) {
         // Vraag per row de kolommen in die row op.
-        int courseIdRow = rs.getInt("ISBN");
-        String emailRow = rs.getString("Titel");
-        String dateRow = rs.getString("Auteur");
+        int courseIdRow = rs.getInt("CourseId");
+        String emailRow = rs.getString("Email");
+        String dateRow = rs.getString("Date");
 
         // Print de kolomwaarden.
         // System.out.println(ISBN + " " + title + " " + author);
