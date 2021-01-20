@@ -1,7 +1,11 @@
 package UnitTest.ValidationTest;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.jupiter.api.RepeatedTest;
+
+import UnitTest.ValidationMethods.PostalCode;
 
 public class PostalCodeTest {
   /**

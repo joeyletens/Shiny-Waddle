@@ -29,8 +29,8 @@ public class MailTools {
    * @ensures \result = true; }
    * 
    */
-  public static boolean validateMailAddress(String mailAddress) {
+  public static String validateMailAddress(String mailAddress) {
 
-    return false;
+    return null;
   }
 }

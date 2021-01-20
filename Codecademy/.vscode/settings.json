@@ -5,6 +5,7 @@
     "c:\\javafx-sdk-11.0.2\\lib\\javafx.controls.jar",
     "c:\\javafx-sdk-11.0.2\\lib\\javafx.fxml.jar",
     "c:\\javafx-sdk-11.0.2\\lib\\javafx.graphics.jar",
-    "c:\\Program Files\\sqljdbc_8.4\\enu\\mssql-jdbc-8.4.1.jre11.jar"
+    "c:\\Program Files\\sqljdbc_8.4\\enu\\mssql-jdbc-8.4.1.jre11.jar",
+    "c:\\Users\\jlete\\Documents\\junit-platform-console-standalone-1.7.0-all.jar"
   ]
 }
