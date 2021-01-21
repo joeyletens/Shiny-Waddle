@@ -149,12 +149,11 @@ public class GUIStudent extends Application {
     window.show();
   }
 
-  // public static void main(String[] args) {
-  // // Launches the graphical user interface
-  // CRUDStudent.database("jletfefeefefefef@gmail.com", "Joey", "Letens",
-  // "15/04/2002", "male", "Draaiboom", "105",
-  // "4433wp");
-  // launch(GUIStudent.class);
-  // }
+  public static void main(String[] args) {
+    // Launches the graphical user interface
+    CRUDStudent.CreateStudent("jletfefeefefefef@gmail.com", "Joey", "Letens", "15/04/2002", "male", "Draaiboom", "105",
+        "4433wp");
+    launch(GUIStudent.class);
+  }
 
 }
